@@ -1,0 +1,4 @@
+If you get a error regarding .pkl file 
+Make sure you run each cell in the jupyter notebook it will automatically create df.pkl and similarity.pkl.
+
+You will need to get your own Spotify Client seed and ID on spotify Developers account.
