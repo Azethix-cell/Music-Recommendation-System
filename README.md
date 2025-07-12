@@ -8,16 +8,38 @@ Upon entering a song name, it finds similar songs based on cosine similarity bet
 
 The system is served through a web interface using Flask.
 
-🧰 Technical Stack
-Layer	Technology
-Frontend	HTML (basic, handled via Flask templates)
-Backend	Python, Flask
-Data Processing	Pandas, NumPy
-NLP / ML	scikit-learn (TF-IDF Vectorizer, Cosine Similarity)
-Model Serialization	pickle for saving precomputed data
-Dataset	spotify_millsongdata.csv – Songs and lyrics dataset
-Deployment	Localhost Flask App (app.py)
+🔧 Tech Stack Overview
+🧠 Machine Learning / Model Training
+Used in: Model Training.ipynb
 
+Python (Jupyter Notebook): For data preprocessing and model training.
+
+Pandas: To handle and manipulate tabular music dataset.
+
+Scikit-learn: For building the similarity matrix using techniques like cosine_similarity.
+
+Pickle: To save trained models and data (df.pkl, similarity.pkl) for later use in the app.
+
+🎧 Spotify API Integration
+Used in: app.py
+
+Spotipy: Python library to access the Spotify Web API.
+
+Used to get album cover, preview audio, and Spotify URLs for tracks.
+
+🖥️ Web Application
+Used in: app.py
+
+Streamlit: Used to build an interactive UI for the recommender system.
+
+Dropdowns for genre/mood filtering
+
+Display of recommendations with images, audio previews, and Spotify links
+
+🗃️ Data Format
+DataFrame (df.pkl): Likely includes columns like song, artist, genre, mood, etc.
+
+Similarity Matrix (similarity.pkl): A precomputed similarity score matrix for content-based recommendations.
 🔑 Key Components / Features
 1. Data Preprocessing:
 Lyrics cleaned and vectorized using TF-IDF Vectorizer.
